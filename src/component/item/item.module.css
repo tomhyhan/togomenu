@@ -1,0 +1,23 @@
+.main {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 1rem;
+  border-radius: 20px;
+  width: 60%;
+}
+
+.categoryName {
+  text-align: center;
+}
+
+.border {
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.orderTitle {
+  text-align: center;
+}

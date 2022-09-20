@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshot renders app 1`] = `
+<div
+  className="app"
+  style={
+    Object {
+      "backgroundImage": "url(\\"images/homebg.jpg\\")",
+    }
+  }
+>
+  <div
+    className="home"
+  >
+    <img
+      alt="togo icon"
+      className="icon"
+      src="images/togo_AppIcon2.png"
+    />
+    <div
+      className="logoGrp"
+    >
+      <img
+        alt="togo title"
+        className="logo"
+        src="images/logoTitle.png"
+      />
+      <div
+        className="locationGrp"
+      >
+        <div
+          className="location"
+        >
+          <strong>
+            SFU Burnaby
+          </strong>
+        </div>
+      </div>
+    </div>
+    <div
+      className="menuGrp"
+    >
+      <a
+        href="/menu"
+        onClick={[Function]}
+      >
+        <img
+          alt="togo menu"
+          className="menu"
+          src="images/viewMenu.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
