@@ -3,6 +3,7 @@ import { render, screen } from "@testing-library/react";
 import App from "../App";
 import reactTestRenderer from "react-test-renderer";
 import { MemoryRouter } from "react-router-dom";
+import { TopologicalSort } from "../../service/topologicalsort";
 
 // test("renders learn react link", () => {
 //   render(<App />);
@@ -24,6 +25,8 @@ describe("App", () => {
             teriyaki: {},
             bento: {},
           }}
+          topologicalSort={{} as TopologicalSort}
+          db={{} as any}
         />
       </MemoryRouter>
     );

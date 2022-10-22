@@ -26,7 +26,8 @@
   width: 100%;
 }
 .location {
-  color: rgb(23, 0, 103);
+  /* color: rgb(23, 0, 103); */
+  color: blueviolet;
   border: 2px solid rgb(23, 0, 103);
   border-radius: 20px;
   padding: 1rem;
@@ -48,6 +49,10 @@
 
 .menu:hover {
   transform: translateY(-0.5rem);
+}
+
+.categoryItem {
+  display: flex;
 }
 
 @media only screen and (max-width: 600px) {

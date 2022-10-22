@@ -1,0 +1,22 @@
+.orders {
+  width: 2rem;
+  height: 3rem;
+}
+
+.orderList {
+  list-style: none;
+}
+
+.orderItem {
+  border: none;
+  border-radius: 10px;
+  background: yellowgreen;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.3rem;
+  width: 12rem;
+  cursor: pointer;
+}
+
+.categoryItem {
+  display: flex;
+}

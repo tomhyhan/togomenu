@@ -244,3 +244,11 @@ export const bento = {
     gomae: "1oz",
   },
 };
+
+export type Category =
+  | "appetizer"
+  | "tempura"
+  | "udon"
+  | "yaki"
+  | "teriyaki"
+  | "bento";

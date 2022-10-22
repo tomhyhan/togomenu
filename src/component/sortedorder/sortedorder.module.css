@@ -1,0 +1,14 @@
+.orderList {
+  list-style: none;
+  padding: 0;
+}
+
+.orderItem {
+  border: none;
+  border-radius: 10px;
+  background: yellowgreen;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.3rem;
+  width: 7rem;
+  cursor: pointer;
+}

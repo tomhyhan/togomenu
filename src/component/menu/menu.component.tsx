@@ -20,7 +20,11 @@ function Menu({ menu }: MenuProps) {
       <ul className={styles.menuGrp}>
         {Object.keys(menu).map((category) => {
           return (
-            <li className={styles.li} onClick={() => handleClick(category)}>
+            <li
+              key={category}
+              className={styles.li}
+              onClick={() => handleClick(category)}
+            >
               <img
                 className={styles.img}
                 src={`images/${category}.jpg`}
