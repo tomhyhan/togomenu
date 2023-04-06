@@ -34,19 +34,20 @@ function Item({ menu, topologicalSort, db }: ItemProps) {
   // mobile touch
   //
   useEffect(() => {
+    // @ts-ignore
     subCategoryRef.current = Object.keys(menu[category!])[0];
     // setSubCategory(Object.keys(menu[category!])[0]);
   }, []);
 
-  useEffect(() => {
-    const getFinalOrder = async () => {
-      let dbOrder = await db.read(category!);
-      if (!dbOrder) dbOrder = {};
-      setFinalOrder(dbOrder);
-      console.log(finalOrder);
-    };
-    getFinalOrder();
-  }, []);
+  // useEffect(() => {
+  //   const getFinalOrder = async () => {
+  //     let dbOrder = await db.read(category!);
+  //     if (!dbOrder) dbOrder = {};
+  //     setFinalOrder(dbOrder);
+  //     console.log(finalOrder);
+  //   };
+  //   getFinalOrder();
+  // }, []);
 
   const addList = () => {
     if (instructionNum[instructionNum.length - 1][1].length === 0) {
@@ -156,15 +157,15 @@ function Item({ menu, topologicalSort, db }: ItemProps) {
     }
     setOrderWarning(null);
 
-    console.log(instructionNum);
-    console.log(orders);
+    // console.log(instructionNum);
+    // console.log(orders);
 
     const isOrder = new Set();
     orders.map((order) => {
       isOrder.add(parseInt(order[0].split(":")[0].trim()));
       isOrder.add(parseInt(order[1].split(":")[0].trim()));
     });
-    console.log(isOrder);
+    // console.log(isOrder);
     const jobList = instructionNum.filter(
       (instruction) => instruction[1].length > 0 && isOrder.has(instruction[0])
     );
@@ -189,9 +190,6 @@ function Item({ menu, topologicalSort, db }: ItemProps) {
     //     return order
     //   })
     // );
-    console.log("new order!");
-    console.log(subCategoryRef);
-    console.log(newFinalOrder);
     db.collection(category!, newFinalOrder);
     setFinalOrder(newFinalOrder);
     setShowFinalOrder(true);
@@ -216,13 +214,16 @@ function Item({ menu, topologicalSort, db }: ItemProps) {
         <h1 className={styles.categoryName}>
           {capitalizeFirstLetter(category!)}
         </h1>
+        {/* @ts-ignore */}
         {Object.keys(menu[category!]).map((item) => {
           return (
             <div key={item}>
               <h3>{item}</h3>
               <ul className={styles.itemList}>
+                {/* @ts-ignore */}
                 {Object.keys(menu[category!][item]).map((key) => (
                   <li key={key}>
+                    {/* @ts-ignore */}
                     {key} : {menu[category!][item][key]}
                   </li>
                 ))}
@@ -231,7 +232,7 @@ function Item({ menu, topologicalSort, db }: ItemProps) {
           );
         })}
       </div>
-      <div className={styles.border}></div>
+      {/* <div className={styles.border}></div>
       <h2 className={styles.orderTitle}>How to make</h2>
       {showFinalOrder ? (
         <div>
@@ -304,7 +305,7 @@ function Item({ menu, topologicalSort, db }: ItemProps) {
           )}
         </>
       )}
-      <div className={styles.border}></div>
+      <div className={styles.border}></div> */}
     </main>
   );
 }
